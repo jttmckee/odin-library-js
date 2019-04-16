@@ -1,0 +1,164 @@
+html {
+  background: linear-gradient(
+    to top left,
+    Moccasin,
+    SeaShell
+
+    );
+  background-repeat:no-repeat;
+  min-height: 100%;
+}
+
+h1 {
+  color: #004;
+}
+#library {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width:100%;
+
+}
+
+#library th, #library td {
+  border-collapse: collapse;
+  padding: 6px 15px;
+}
+#library th {
+  border-bottom: 1px solid #004;
+
+
+}
+#library td {
+  border: 1px dashed lightGray;
+  position: relative;
+}
+#library td:first-child {
+  padding-left: 25px;
+}
+
+#library td:nth-child(3) {
+  text-align: center;
+}
+
+#library tr:nth-child(2n) {
+  background-color: PaleTurquoise;
+}
+#library tr:nth-child(2n + 1) {
+  background-color: LightBlue;
+}
+#library tr:first-child {
+  background: linear-gradient( to top left,
+    #002,
+    #060647
+
+    ) ;
+  color: LightCyan;
+  font-family: Arial, sans-serif;
+}
+.library {
+  display: grid;
+  grid-auto-flow: row;
+  justify-content: center;
+
+}
+form {
+  width: calc(100% - 20px);
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid powderBlue;
+  border-radius: 15px;
+  background: rgba(0,100,255,0.3);
+}
+#new-book {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  height: 30px;
+  background: linear-gradient(
+    to top left,
+    Azure,
+    White
+    );
+    color: #003;
+}
+button.delete {
+  background-color: rgba(10,10,10,0);
+  padding: 0  ;
+  margin: 0 3px 0 0;
+  border: none;
+  font-size: 1em;
+  position: absolute;
+  left: 4px;
+  top:5px;
+}
+button.delete:hover {
+  background-color: rgba(100,0,0,.1);
+  cursor: pointer;
+
+}
+button.delete:active {
+  background-color: rgba(100,0,0,.15);
+  cursor: pointer;
+  font-size: 1.1em;
+
+}
+/* Slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
